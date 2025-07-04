@@ -4,7 +4,6 @@ import * as React from "react"
 import {
   IconBus,
   IconCamera,
-  IconChartBar,
   IconDashboard,
   IconDatabase,
   IconFileAi,
@@ -12,8 +11,6 @@ import {
   IconFileWord,
   IconFolder,
   IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
   IconReport,
   IconRoad,
   IconSearch,
