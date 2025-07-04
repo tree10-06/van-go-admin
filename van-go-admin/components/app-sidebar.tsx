@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import {
+  IconBus,
   IconCamera,
   IconChartBar,
   IconDashboard,
@@ -14,6 +15,7 @@ import {
   IconInnerShadowTop,
   IconListDetails,
   IconReport,
+  IconRoad,
   IconSearch,
   IconSettings,
   IconUsers,
@@ -32,6 +34,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { Truck } from "lucide-react"
 
 const data = {
   user: {
@@ -46,14 +49,14 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
+      title: "Users",
       url: "#",
-      icon: IconListDetails,
+      icon: IconUsers,
     },
     {
-      title: "Analytics",
+      title: "Drivers",
       url: "#",
-      icon: IconChartBar,
+      icon: IconBus,
     },
     {
       title: "Projects",
@@ -61,9 +64,9 @@ const data = {
       icon: IconFolder,
     },
     {
-      title: "Team",
+      title: "Routes",
       url: "#",
-      icon: IconUsers,
+      icon: IconRoad,
     },
   ],
   navClouds: [
@@ -161,8 +164,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
               <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <Truck className="!size-5" />
+                <span className="text-base font-semibold">Van Go Admin</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>

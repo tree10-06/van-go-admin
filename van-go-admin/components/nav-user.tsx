@@ -28,6 +28,8 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
+
 
 export function NavUser({
   user,
@@ -88,20 +90,22 @@ export function NavUser({
                 <IconUserCircle />
                 Account
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              {/* <DropdownMenuItem>
                 <IconCreditCard />
                 Billing
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
               <DropdownMenuItem>
                 <IconNotification />
                 Notifications
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
+          <Link href="/">
             <DropdownMenuItem>
               <IconLogout />
               Log out
             </DropdownMenuItem>
+          </Link>
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>
