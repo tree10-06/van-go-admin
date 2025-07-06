@@ -3,13 +3,13 @@
 import * as React from "react"
 import {
   IconBus,
+  IconCalendar,
   IconCamera,
   IconDashboard,
   IconDatabase,
   IconFileAi,
   IconFileDescription,
   IconFileWord,
-  IconFolder,
   IconHelp,
   IconReport,
   IconRoad,
@@ -42,27 +42,27 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
       title: "Users",
-      url: "#",
+      url: "/users",
       icon: IconUsers,
     },
     {
       title: "Drivers",
-      url: "#",
+      url: "/drivers",
       icon: IconBus,
     },
     {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
+      title: "Schedules",
+      url: "schedule",
+      icon: IconCalendar,
     },
     {
       title: "Routes",
-      url: "#",
+      url: "routes",
       icon: IconRoad,
     },
   ],
