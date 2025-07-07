@@ -30,7 +30,10 @@ const baseColumns = defaultColumns as ColumnDef<DriverData>[]
 // Safely map columns and update headers by checking accessorKey existence
 // Filter out the "reviewer" column before mapping
 const customColumns: ColumnDef<DriverData>[] = baseColumns
-  .filter((col) => col.id !== "reviewer" && (col as any).accessorKey !== "reviewer")
+  .filter(
+  (col): col is ColumnDef<DriverData> & { accessorKey: keyof DriverData } =>
+    'accessorKey' in col && col.accessorKey !== "reviewer"
+)
   .map((col) => {
     if ("accessorKey" in col && col.accessorKey) {
       switch (col.accessorKey) {

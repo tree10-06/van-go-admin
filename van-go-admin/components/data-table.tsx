@@ -28,7 +28,7 @@ import {
   IconChevronsRight,
   IconCircleCheckFilled,
   IconDotsVertical,
-  IconGripVertical,
+  // IconGripVertical,
   IconLayoutColumns,
   IconLoader,
   IconPlus,

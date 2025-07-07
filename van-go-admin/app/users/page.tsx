@@ -31,7 +31,10 @@ const baseColumns = defaultColumns as ColumnDef<UserData>[]
 // Safely map columns and update headers by checking accessorKey existence
 // Filter out the "reviewer" column before mapping
 const customColumns: ColumnDef<UserData>[] = baseColumns
-  .filter((col) => col.id !== "reviewer" && (col as any).accessorKey !== "reviewer")
+  .filter(
+  (col): col is ColumnDef<UserData> & { accessorKey: keyof UserData } =>
+    'accessorKey' in col && col.accessorKey !== "reviewer"
+)
   .map((col) => {
     if ("accessorKey" in col && col.accessorKey) {
       switch (col.accessorKey) {
